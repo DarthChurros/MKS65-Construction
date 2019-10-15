@@ -9,6 +9,7 @@ int main() {
   struct book myBook = writeBook("The Lord of the Rings");
 
   printBook(myBook);
+  printf("%s is located at address %u\n\n", myBook.title, &myBook);
 
   struct book newBook = writeBook("Homo Deus");
 
@@ -18,6 +19,7 @@ int main() {
 
   setAttr(&myBook, "The Return of the King", myBook.length / 3);
   printBook(myBook);
+  printf("%s is located at address %u\n", myBook.title, &myBook);
 
   return 0;
 }
