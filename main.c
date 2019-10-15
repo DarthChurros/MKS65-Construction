@@ -6,18 +6,18 @@
 int main() {
   srand(time(NULL));
 
-  struct book myBook;
-  writeBook(myBook, "The Lord of the Rings");
+  struct book myBook = writeBook("The Lord of the Rings");
 
   printBook(myBook);
 
-  struct book newBook;
-  writeBook(newBook, "Homo Deus");
+  struct book newBook = writeBook("Homo Deus");
 
   printBook(newBook);
 
-  printf("\nShortening LoTR to one volume...");
+  printf("\nShortening LoTR to one volume...\n");
 
-  setAttr(myBook, "The Return of the King", myBook.length / 3);
+  setAttr(&myBook, "The Return of the King", myBook.length / 3);
   printBook(myBook);
+
+  return 0;
 }
