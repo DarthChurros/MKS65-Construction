@@ -1,11 +1,11 @@
-all: main.o functions.o
-	gcc -o program main.o functions.o
+all: main.o books.o
+	gcc -o program main.o books.o
 
-main.o: main.c headers.h
+main.o: main.c books.h
 	gcc -c main.c
 
-functions.o: functions.c headers.h
-	gcc -c functions.c
+books.o: books.c books.h
+	gcc -c books.c
 
 run:
 	./program
