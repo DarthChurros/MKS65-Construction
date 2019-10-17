@@ -1,5 +1,5 @@
-#ifndef HEADERS_H
-#define HEADERS_H
+#ifndef BOOKS_H
+#define BOOKS_H
 
 struct book {
   char* title;
