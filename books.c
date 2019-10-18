@@ -3,8 +3,8 @@
 #include "books.h"
 
 void writeBook(struct book* new, char* name) {
-  new.title = name;
-  new.length = rand() % 900 + 100;
+  new->title = name;
+  new->length = rand() % 900 + 100;
 }
 
 void printBook(struct book toRead) {
