@@ -6,7 +6,7 @@ struct book {
   int length;
 };
 
-struct book writeBook(char* name);
+void writeBook(struct book* new, char* name);
 void printBook(struct book toRead);
 void setAttr(struct book* toWrite, char* newName, int newLen);
 

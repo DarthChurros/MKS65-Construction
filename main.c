@@ -6,12 +6,14 @@
 int main() {
   srand(time(NULL));
 
-  struct book myBook = writeBook("The Lord of the Rings");
+  struct book myBook;
+  writeBook(&myBook, "The Lord of the Rings");
 
   printBook(myBook);
   printf("\"%s\" is located at address %p\n\n", myBook.title, &myBook);
 
-  struct book newBook = writeBook("Homo Deus");
+  struct book newBook;
+  writeBook(&newBook, "Homo Deus");
 
   printBook(newBook);
 

@@ -2,11 +2,9 @@
 #include <stdio.h>
 #include "books.h"
 
-struct book writeBook(char* name) {
-  struct book new;
+void writeBook(struct book* new, char* name) {
   new.title = name;
   new.length = rand() % 900 + 100;
-  return new;
 }
 
 void printBook(struct book toRead) {
